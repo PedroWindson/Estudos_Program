@@ -42,17 +42,15 @@ def executar_query():
             print(f"{cursor.rowcount} linhas atualizadas.")
     
     except Error as e:
-        # Exibe uma mensagem de erro, caso a conexão ou a execução da consulta falhem
-        print(f"Erro ao conectar ou executar a consulta: {e}")
+        print(f"Erro ao conectar ou executar a consulta: {e}") # Exibe uma mensagem de erro, caso a conexão ou a execução da consulta falhem
 
     finally:
         # Esse bloco é sempre executado, independente de ter ocorrido erro ou não
-        # Verifica se a conexão com o banco de dados está aberta
-        if connection.is_connected():
-            # Fecha o cursor (o que estava executando os comandos SQL)
-            cursor.close()
-            # Fecha a conexão com o banco de dados
-            connection.close()
+        if connection.is_connected(): # Verifica se a conexão com o banco de dados está aberta
+            
+            cursor.close() # Fecha o cursor (o que estava executando os comandos SQL)
+            
+            connection.close() # Fecha a conexão com o banco de dados
             print("Conexão encerrada.")
 
 # Loop para executar a função a cada 30 minutos
