@@ -1,2 +1,2 @@
-# Estudos_Program
-Repositório cirado para armazenar meus estudos sobre programação.
+# Estudos_Program_Python
+Repositório cirado para armazenar meus estudos sobre programação com Python.
